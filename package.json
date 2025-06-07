@@ -1,0 +1,30 @@
+{
+  "name": "cat-image",
+  "version": "1.0.0",
+  "description": "Формат изображений .cat с инструментами для конвертации и просмотра.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --minify --target node",
+    "compile": "bun build src/index.ts --minify --target bun --bytecode --compile --outfile catimg",
+    "start": "bun src/index.ts",
+    "cat": "bun dist/index.js"
+  },
+  "keywords": [
+    "image",
+    "converter",
+    "cat",
+    "format"
+  ],
+  "author": "art3m4ik3",
+  "license": "MIT",
+  "dependencies": {
+    "jimp": "^0.22.12",
+    "commander": "^11.1.0",
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/pako": "^2.0.3",
+    "typescript": "^5.3.3"
+  }
+}
